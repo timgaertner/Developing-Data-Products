@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Train Your Model App</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Train Your Model App">
+  <meta name="author" content="Tim Gaertner">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Train Your Model App</h1>
+    <h2></h2>
+    <p>Tim Gaertner<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Selecting Training Population</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>An important task in any supervised modeling exercise is selecting data to train a model</p></li>
+<li><p>The common question for this task is what proportion of the available data should a modeler use to train their model?</p></li>
+<li><p>That&#39;s where the &quot;Train Your Model&quot; Application comes in to play</p></li>
+<li><p>The &quot;Train Your Model&quot; App allows a predictive modeler to efficiently test out training proporitons to see what portion of the data yields the highest accuracy on the test data</p></li>
+<li><p>All the user needs to do is enter in different training proportion values and see what happens to the testing accuracy</p></li>
+<li><p>With the instant feedback, the modeler can feel confident in the training partition they select</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>How does it work?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Example: iris data with .5 proportion of the data used for model building</p>
+
+<p>Confusion Matrix Results:</p>
+
+<pre><code>##               (actual) setosa veriscolor virginica
+## (pred) setosa              25          0         0
+## veriscolor                  0         23         2
+## virginica                   0          3        22
+</code></pre>
+
+<p>Model Accuracy on Test data:</p>
+
+<pre><code>## [1] 0.933
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>How does it work? Cont...</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>What if we increased the proportion of the data used for model building to .6 instead?</p>
+
+<p>Confusion Matrix Results:</p>
+
+<pre><code>##               (actual) setosa veriscolor virginica
+## (pred) setosa              20          0         0
+## veriscolor                  0         20         0
+## virginica                   0          1        19
+</code></pre>
+
+<p>Model Accuracy on Test data:</p>
+
+<pre><code>## [1] 0.983
+</code></pre>
+
+<ul>
+<li>The result is an increase in model accuracy. The modeler might conclude that including more data in the training partition better describes the target classes and it would be wise to allow for a higher training proportion.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Appendix</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://timgaertner.shinyapps.io/TrainYourModel">Take &quot;Train Your Model&quot; for a Spin</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Selecting Training Population'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How does it work?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How does it work? Cont...'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Appendix'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
