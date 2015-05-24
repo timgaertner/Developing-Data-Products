@@ -1,5 +1,5 @@
 ---
-title       : Train Your Model App
+title       : Train Your Model Application
 subtitle    : 
 author      : Tim Gaertner
 job         : 
